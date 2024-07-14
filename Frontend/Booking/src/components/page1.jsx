@@ -46,7 +46,7 @@ function Page1() {
                         />
                     </div>
                     <button type='submit' className="w-full px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">
-                        Submit
+                        Next
                     </button>
                 </form>
             </div>

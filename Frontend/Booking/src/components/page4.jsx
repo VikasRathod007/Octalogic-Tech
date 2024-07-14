@@ -1,17 +1,13 @@
-import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Page3() {
-    const location = useLocation();
-    const { state } = location;
-    const selectedValue = state?.selectedValue || 'None';
-    const [value, setValue] = React.useState(selectedValue);
-
+function Page4() {
+    const [value, setValue] = useState("option1");
     const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate('/page4', { state: { selectedValue: value } });
+        navigate('/page5', { state: { selectedModel: value } });
     };
 
     const handleChange = (event) => {
@@ -21,8 +17,8 @@ function Page3() {
     return (
         <div className="w-full max-w-lg mx-auto pt-20">
             <div className="form-container">
-                <form onSubmit={handleSubmit} className="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg custom-form-container">
-                    <h1 className="text-2xl font-bold mb-4">Select the type of vehicle.</h1>
+                <form className="w-full max-w-lg bg-white p-6 rounded-lg shadow-lg custom-form-container" onSubmit={handleSubmit}>
+                    <h1 className="text-2xl font-bold mb-4">Select the model.</h1>
                     <div className="flex flex-col space-y-4"> {/* Added flex container for alignment */}
                         <div className="flex items-center border border-gray-200 rounded dark:border-gray-700 mb-4">
                             <select
@@ -41,9 +37,9 @@ function Page3() {
                         </button>
                     </div>
                 </form>
-            </div >
-        </div >
+            </div>
+        </div>
     );
 }
 
-export default Page3;
+export default Page4;
