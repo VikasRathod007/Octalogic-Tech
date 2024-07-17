@@ -5,6 +5,7 @@ import Page2 from './components/page2'
 import Page3 from './components/page3'
 import Page4 from './components/page4'
 import Page5 from './components/page5'
+import Page6 from './components/page6'
 import 'flowbite/dist/flowbite.min.js';
 import './App.css'
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/page3' element={<Page3 />} />
           <Route path='/page4' element={<Page4 />} />
           <Route path='/page5' element={<Page5 />} />
+          <Route path='/page6' element={<Page6 />} />
         </Routes>
       </Router>
     </>
